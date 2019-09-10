@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
   <head>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -41,7 +40,7 @@
       <%= link_to 'Home', root_path, class: "btn btn-info" %>
     </ul>
   </nav>
-  
+  <br><br><br><br>
   <% if user_signed_in? %>
     
     <% if current_user.profile == nil %>
@@ -51,7 +50,7 @@
     <% else %>
     <% if current_user.profile.image? %>         
     
-      <p><%= image_tag current_user.profile.image.url, class:"rounded-circle" %></p>
+      <p ><%= image_tag current_user.profile.image.url, style: 'height:100px;width:100px; border-radius: 50%;' %></p>
         
       <%= link_to 'Edit Profile picture', edit_profile_path(current_user), class: "btn btn-success " %>
      <% end %> 

@@ -1,7 +1,6 @@
 <h3>Send it with the following contents.</h3>
 
 <%= form_with(model: @post, url: posts_path, local: true) do |form| %>
-  
   <p>Description:<%= @post.description %></p>
   <p>Image:<%= image_tag (@post.image.url) if @post.image && @post.image.url %></p>
   <%= form.hidden_field :description %>
